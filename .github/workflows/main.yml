@@ -1,10 +1,25 @@
-name: Python UnitTest
+name: Python Unit Test
+
 on: [push]
+
 jobs:
-  test:
+  build:
+
     runs-on: ubuntu-latest
+    strategy:
+      # You can use PyPy versions in python-version.
+      # For example, pypy2 and pypy3
+      matrix:
+        python-version: [3.6]
+
     steps:
-      - name: Prepare repo
-        uses: actions/checkout@master
-      - name: Test
-        uses: onichandame/python-test-action@master
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    # You can test your matrix by printing the current Python version
+    - name: Display Python version
+      run: python -c "import sys; print(sys.version)"
+    - name: AO UnitTest
+      run: python -m unittest discover ./ao/
