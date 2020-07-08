@@ -10,8 +10,8 @@ class Solution:
 
         imin, imax, half_len = 0, m, (m + n + 1) / 2
         while imin <= imax:
-            i = (imin + imax) / 2
-            j = half_len - i
+            i = int((imin + imax) / 2)
+            j = int(half_len - i)
             if i < m and B[j-1] > A[i]:
                 # i is too small, must increase it
                 imin = i + 1
