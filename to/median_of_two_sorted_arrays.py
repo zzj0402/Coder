@@ -14,20 +14,24 @@ class Solution:
                 left = nums1[index_left]
             if index_right < len(nums2):
                 right = nums2[index_right]
-            if len(nums1) == 0 or left < right:
-                if index_left >= len(nums1):
-                    arranged_nums.append(right)
-                    index_right += 1
-                else:
-                    arranged_nums.append(left)
+            if len(nums2) == 0:
+                arranged_nums.append(left)
                 index_left += 1
             else:
-                if index_right >= len(nums2):
-                    arranged_nums.append(left)
+                if len(nums1) == 0 or left < right:
+                    if index_left >= len(nums1):
+                        arranged_nums.append(right)
+                        index_right += 1
+                    else:
+                        arranged_nums.append(left)
                     index_left += 1
                 else:
-                    arranged_nums.append(right)
-                index_right += 1
+                    if index_right >= len(nums2):
+                        arranged_nums.append(left)
+                        index_left += 1
+                    else:
+                        arranged_nums.append(right)
+                    index_right += 1
             if mod == 0:
                 if len(arranged_nums) > total_length/2:
                     return arranged_nums[-1]/2+arranged_nums[-2]/2
