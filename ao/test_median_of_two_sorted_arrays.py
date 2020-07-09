@@ -22,6 +22,10 @@ class TestMedianOfTwoSortedArrays(unittest.TestCase):
         self.assertEqual(SOLUTION.findMedianSortedArrays([0], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]), 10.0,
                          "The median should be 5.0")
 
+    def test_empty_array(self):
+        self.assertEqual(SOLUTION.findMedianSortedArrays(
+            [], [1, 2, 3, 4, 5, 6, 7]), 4.0, "Left empty array, result should be 4.0")
+
 
 if __name__ == '__main__':
     unittest.main()

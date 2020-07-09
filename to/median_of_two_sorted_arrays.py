@@ -8,12 +8,13 @@ class Solution:
         arranged_nums = []
         index_left = 0
         index_right = 0
+
         while index_left < len(nums1) or index_right < len(nums2):
             if index_left < len(nums1):
                 left = nums1[index_left]
             if index_right < len(nums2):
                 right = nums2[index_right]
-            if left < right:
+            if len(nums1) == 0 or left < right:
                 if index_left >= len(nums1):
                     arranged_nums.append(right)
                     index_right += 1
