@@ -55,3 +55,12 @@ Visualization the algorithm to communicate with people, inside and outside the t
 ### Warrant Officer
 
 #### Security Vulnerabilities
+
+## Workflow
+1. Identify use cases (FO)
+1. Planning solutions (PO)
+1. Analyzing options (EO)
+1. Write test cases (AO)
+1. Implement codes(TO)
+1. Documentation(SO)
+1. Break implementation (WO)
