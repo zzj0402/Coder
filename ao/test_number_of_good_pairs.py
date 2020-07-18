@@ -10,19 +10,19 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(True, True)
 
     def test_eg1(self):
-        self.assertEqual(SOLUTION.find_num_of_good_pairs([1, 2, 3, 1, 1, 3]), 4)
+        self.assertEqual(SOLUTION.numIdenticalPairs([1, 2, 3, 1, 1, 3]), 4)
 
     def test_eg2(self):
-        self.assertEqual(SOLUTION.find_num_of_good_pairs([1, 1, 1, 1]), 6)
+        self.assertEqual(SOLUTION.numIdenticalPairs([1, 1, 1, 1]), 6)
 
     def test_eg3(self):
-        self.assertEqual(SOLUTION.find_num_of_good_pairs([1, 2, 3]), 0)
+        self.assertEqual(SOLUTION.numIdenticalPairs([1, 2, 3]), 0)
 
     def test_eg_empty(self):
-        self.assertEqual(SOLUTION.find_num_of_good_pairs([]), 0)
+        self.assertEqual(SOLUTION.numIdenticalPairs([]), 0)
 
     def test_eg_one(self):
-        self.assertEqual(SOLUTION.find_num_of_good_pairs([1]), 0)
+        self.assertEqual(SOLUTION.numIdenticalPairs([1]), 0)
 
 
 if __name__ == '__main__':
