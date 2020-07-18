@@ -61,6 +61,9 @@ Visualization the algorithm to communicate with people, inside and outside the t
 1. Planning solutions (PO)
 1. Analyzing options (EO)
 1. Write test cases (AO)
-1. Implement codes(TO)
-1. Documentation(SO)
+### Implement codes(TO)
+1. Making a Draft PR
+1. Atomic commits
+1. Peer review codes
+### Documentation(SO)
 1. Break implementation (WO)
