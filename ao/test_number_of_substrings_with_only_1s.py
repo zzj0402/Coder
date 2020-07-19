@@ -9,12 +9,14 @@ class TestStringMethods(unittest.TestCase):
     def test_always_true(self):
         self.assertEqual(True, True)
 
+    # Test our formula, making sure it works well
     def test_get_num_of_substrings_of_n_1s(self):
         self.assertEqual(get_num_of_substrings_of_n_1s(1), 1)
         self.assertEqual(get_num_of_substrings_of_n_1s(2), 3)
         self.assertEqual(get_num_of_substrings_of_n_1s(3), 6)
         self.assertEqual(get_num_of_substrings_of_n_1s(4), 10)
 
+    # testcase is from https://leetcode.com/problems/number-of-substrings-with-only-1s/
     def test_eg1(self):
         self.assertEqual(SOLUTION.numSub('0110111'), 9)
 
