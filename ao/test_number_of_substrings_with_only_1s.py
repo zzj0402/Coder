@@ -6,9 +6,6 @@ SOLUTION = Solution()
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_always_true(self):
-        self.assertEqual(True, True)
-
     # Test our formula, making sure it works well
     def test_get_num_of_substrings_of_n_1s(self):
         self.assertEqual(get_num_of_substrings_of_n_1s(1), 1)
