@@ -17,13 +17,10 @@ class Solution:
         result = 0
         one_range_start = None
         for i in range(len(s)):
-            # mark the start of segment
             if one_range_start is None and s[i] == '1':
                 one_range_start = i
-                # if the char is the last one, just add 1 to result
                 if check_is_last_idx_of_s(s, i):
                     result += 1
-            # it's the end of one segment
             elif one_range_start is not None and s[i] == '0':
                 # len of segment: (i - 1) - one_range_start + 1
                 result += get_num_of_substrings_of_n_1s(i - one_range_start)
