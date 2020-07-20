@@ -33,4 +33,6 @@ class Solution:
                 result += get_num_of_substrings_of_n_1s(i - one_range_start + 1)
                 one_range_start = None
 
+        # https://leetcode.com/problems/number-of-substrings-with-only-1s/
+        # Since the answer may be too large, return it modulo 10^9 + 7.
         return result % (10**9 + 7)
