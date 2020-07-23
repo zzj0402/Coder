@@ -1,6 +1,6 @@
 import math
 
-min_delta = 10 ** -5
+min_delta = math.pow(10, -5)
 
 
 class Solution:
@@ -8,8 +8,8 @@ class Solution:
         def get_dist(x, y):
             dist_result = 0
             for i, j in positions:
-                dist_result += (x - i) ** 2 + (y - j) ** 2
-            return math.sqrt(dist_result)
+                dist_result += math.sqrt(math.pow((x - i), 2) + math.pow((y - j), 2))
+            return dist_result
 
         def get_initial_x_y():
             y_init = x_init = 0
