@@ -5,10 +5,10 @@ min_delta = math.pow(10, -5)
 
 class Solution:
     def getMinDistSum(self, positions) -> float:
-        def get_dist(x, y):
+        def get_dist(point_x, point_y):
             dist_result = 0
             for i, j in positions:
-                dist_result += math.sqrt(math.pow((x - i), 2) + math.pow((y - j), 2))
+                dist_result += math.sqrt(math.pow((point_x - i), 2) + math.pow((point_y - j), 2))
             return dist_result
 
         def get_initial_x_y():
