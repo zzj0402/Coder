@@ -1,6 +1,6 @@
 import math
 
-min_delta = math.pow(10, -5)
+min_delta = math.pow(10, -7)
 
 
 class Solution:
