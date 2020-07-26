@@ -10,4 +10,8 @@ class Solution:
         if negative:
             return -int(reverse)
         else:
-            return int(reverse)
+            int_reverse = int(reverse)
+            if int_reverse >= 2147483648:
+                return 0
+            else:
+                return int_reverse
