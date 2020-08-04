@@ -10,6 +10,14 @@ class TestLongestCommonPrefix(unittest.TestCase):
         self.assertEqual(SOLUTION.longestCommonPrefix(
             ['flower', 'flow', 'flight']), "fl", 'Example 1 should work!')
 
+    def test_example_2(self):
+        self.assertEqual(SOLUTION.longestCommonPrefix(
+            ['dog', 'racecar', 'car']), "", 'Example 2 should work!')
+
+    def test_example_empty_array(self):
+        self.assertEqual(SOLUTION.longestCommonPrefix(
+            []), "", 'Empty array should return empty string!')
+
 
 if __name__ == '__main__':
     unittest.main()
