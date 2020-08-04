@@ -9,7 +9,11 @@ class Solution:
         while index < len(array_of_strings[0]):
             last_string_character = array_of_strings[0][index]
             for each_string in array_of_strings:
-                if last_string_character != each_string[index]:
+                if index < len(each_string):
+                    if last_string_character != each_string[index]:
+                        return output
+                else:
                     return output
             output += last_string_character
             index += 1
+        return output
