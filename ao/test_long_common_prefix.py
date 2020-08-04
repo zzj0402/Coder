@@ -18,6 +18,10 @@ class TestLongestCommonPrefix(unittest.TestCase):
         self.assertEqual(SOLUTION.longestCommonPrefix(
             []), "", 'Empty array should return empty string!')
 
+    def test_example_empty_strings(self):
+        self.assertEqual(SOLUTION.longestCommonPrefix(
+            ['', '', '', '', '']), "", 'Array of empty strings should return empty string!')
+
 
 if __name__ == '__main__':
     unittest.main()
